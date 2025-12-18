@@ -31,11 +31,11 @@ const ContactSection = () => {
           </div>
           
           {/* Social links */}
-          <div className="flex items-center justify-center gap-6">
+          {/* <div className="flex items-center justify-center gap-6">
             {["Dribbble", "Behance", "LinkedIn", "Twitter"].map(social => <a key={social} href="#" className="link-underline text-muted-foreground hover:text-foreground transition-colors text-sm">
                 {social}
               </a>)}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>;
