@@ -1,21 +1,22 @@
 import { ArrowUpRight } from "lucide-react";
+import qualcoImage from "@/assets/qualco-management.webp";
 
 const projects = [
   {
     id: 1,
-    title: "Luxe Commerce",
-    category: "E-commerce",
-    description: "Refonte complète d'une boutique de mode haut de gamme",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop",
-    color: "from-orange-500/20 to-red-500/20",
+    title: "La Bande à Paul",
+    category: "Site Vitrine",
+    description: "Refonte complète du site d'une agence de scénographie",
+    image: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&h=600&fit=crop",
+    color: "from-orange-500/20 to-amber-500/20",
   },
   {
     id: 2,
-    title: "FinTrack App",
-    category: "Application Mobile",
-    description: "Application de gestion financière personnelle",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-    color: "from-blue-500/20 to-cyan-500/20",
+    title: "Qualco Management",
+    category: "Site Vitrine",
+    description: "Création du site d'une entreprise de gestion immobilière",
+    image: qualcoImage,
+    color: "from-emerald-500/20 to-teal-500/20",
   },
   {
     id: 3,
