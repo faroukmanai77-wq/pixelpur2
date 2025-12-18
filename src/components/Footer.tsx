@@ -6,7 +6,7 @@ const Footer = () => {
           Pixelpur<span className="text-primary">.</span>
         </a>
         <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Tous droits réservés
+          © 2023 Tous droits réservés
         </p>
       </div>
     </footer>
