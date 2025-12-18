@@ -6,7 +6,7 @@ const AboutSection = () => {
     value: "10+",
     label: "Projets réalisés"
   }, {
-    value: "30+",
+    value: "10+",
     label: "Clients satisfaits"
   }];
   return <section id="apropos" className="py-32 relative overflow-hidden">
