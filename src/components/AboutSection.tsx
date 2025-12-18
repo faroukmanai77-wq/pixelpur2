@@ -3,7 +3,7 @@ const AboutSection = () => {
     value: "5+",
     label: "Années d'expérience"
   }, {
-    value: "50+",
+    value: "2+",
     label: "Projets réalisés"
   }, {
     value: "30+",
