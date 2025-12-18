@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import qualcoImage from "@/assets/qualco-management.webp";
 import bapImage from "@/assets/bap.png";
+import quosmosImage from "@/assets/quosmos.webp";
 
 const projects = [
   {
@@ -24,7 +25,7 @@ const projects = [
     title: "Solutions Quosmos",
     category: "Site Vitrine",
     description: "Création du site d'une entreprise de distribution alimentaire",
-    image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=800&h=600&fit=crop",
+    image: quosmosImage,
     color: "from-purple-500/20 to-pink-500/20",
   },
   {
