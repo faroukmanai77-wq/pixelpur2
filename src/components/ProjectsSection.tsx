@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import qualcoImage from "@/assets/qualco-management.webp";
+import bapImage from "@/assets/bap.png";
 
 const projects = [
   {
@@ -7,7 +8,7 @@ const projects = [
     title: "La Bande à Paul",
     category: "Site Vitrine",
     description: "Refonte complète du site d'une agence de scénographie",
-    image: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&h=600&fit=crop",
+    image: bapImage,
     color: "from-orange-500/20 to-amber-500/20",
   },
   {
