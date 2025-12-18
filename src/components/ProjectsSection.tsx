@@ -2,6 +2,8 @@ import { ArrowUpRight } from "lucide-react";
 import qualcoImage from "@/assets/qualco-management.webp";
 import bapImage from "@/assets/bap.png";
 import quosmosImage from "@/assets/quosmos.webp";
+import comptableImage from "@/assets/comptable.jpg";
+
 
 const projects = [
   {
@@ -30,10 +32,10 @@ const projects = [
   },
   {
     id: 4,
-    title: "Green Energy",
-    category: "Landing Page",
-    description: "Campagne de sensibilisation environnementale",
-    image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&h=600&fit=crop",
+    title: "Fiscpro Conseils",
+    category: "Site Vitrine",
+    description: "Création du site d'un comptable",
+    image: comptableImage,
     color: "from-green-500/20 to-emerald-500/20",
   },
 ];
