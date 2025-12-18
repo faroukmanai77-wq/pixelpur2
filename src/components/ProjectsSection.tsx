@@ -21,9 +21,9 @@ const projects = [
   },
   {
     id: 3,
-    title: "Artisan Studio",
+    title: "Solutions Quosmos",
     category: "Site Vitrine",
-    description: "Portfolio pour un collectif d'artistes contemporains",
+    description: "Création du site d'une entreprise de distribution alimentaire",
     image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=800&h=600&fit=crop",
     color: "from-purple-500/20 to-pink-500/20",
   },
