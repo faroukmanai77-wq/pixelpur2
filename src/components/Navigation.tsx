@@ -26,7 +26,7 @@ const Navigation = () => {
     >
       <div className="container flex items-center justify-between">
         <a href="#" className="font-display text-2xl font-bold text-foreground">
-          Studio<span className="text-primary">.</span>
+          Pixelpur<span className="text-primary">.</span>
         </a>
         
         <div className="hidden md:flex items-center gap-8">
