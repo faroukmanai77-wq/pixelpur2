@@ -13,6 +13,7 @@ const projects = [
     description: "Refonte complète du site d'une agence de scénographie",
     image: bapImage,
     color: "from-orange-500/20 to-amber-500/20",
+    url: "https://labandeapaul.ca",
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const projects = [
     description: "Création du site d'une entreprise de gestion immobilière",
     image: qualcoImage,
     color: "from-emerald-500/20 to-teal-500/20",
+    url: "https://qualco.ca",
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ const projects = [
     description: "Création du site d'une entreprise de distribution alimentaire",
     image: quosmosImage,
     color: "from-purple-500/20 to-pink-500/20",
+    url: "https://quosmos.ca",
   },
   {
     id: 4,
@@ -37,6 +40,7 @@ const projects = [
     description: "Création du site d'un comptable",
     image: comptableImage,
     color: "from-green-500/20 to-emerald-500/20",
+    url: "https://fiscpro.ca",
   },
 ];
 
@@ -58,15 +62,21 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <article
-              key={project.id}
-              className="group relative rounded-2xl overflow-hidden bg-card hover-lift cursor-pointer"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+        {projects.map((project, index) => (
+          <a
+            key={project.id}
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block"
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
+            <article className="relative rounded-2xl overflow-hidden bg-card hover-lift cursor-pointer">
               
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+              />
+        
               <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src={project.image}
@@ -74,9 +84,9 @@ const ProjectsSection = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
-              
+        
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-              
+        
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <div className="flex items-start justify-between gap-4">
                   <div>
@@ -90,15 +100,17 @@ const ProjectsSection = () => {
                       {project.description}
                     </p>
                   </div>
+        
                   <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
                     <ArrowUpRight className="w-5 h-5 text-primary-foreground" />
                   </div>
                 </div>
               </div>
+        
             </article>
-          ))}
-        </div>
-      </div>
+          </a>
+        ))}
+
     </section>
   );
 };
