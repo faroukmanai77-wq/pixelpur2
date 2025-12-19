@@ -44,9 +44,30 @@ const AboutSection = () => {
           </div>
           
           <div className="relative">
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-card">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=750&fit=crop&crop=face" alt="Portrait" className="w-full h-full object-cover" />
+            {/* Abstract decorative element instead of photo */}
+            <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-card via-card to-primary/10 border border-border relative overflow-hidden">
+              {/* Geometric patterns */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-48 h-48 border-2 border-primary/20 rounded-full animate-pulse" />
+                <div className="absolute w-32 h-32 border-2 border-primary/30 rounded-full" />
+                <div className="absolute w-16 h-16 bg-gradient-primary rounded-full opacity-80" />
+              </div>
+              
+              {/* Decorative lines */}
+              <div className="absolute top-8 left-8 right-8 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+              <div className="absolute bottom-8 left-8 right-8 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+              
+              {/* Corner accents */}
+              <div className="absolute top-6 left-6 w-12 h-12 border-l-2 border-t-2 border-primary/40 rounded-tl-lg" />
+              <div className="absolute bottom-6 right-6 w-12 h-12 border-r-2 border-b-2 border-primary/40 rounded-br-lg" />
+              
+              {/* Central text element */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
+                <span className="font-display text-6xl font-bold text-gradient mb-2">PP</span>
+                <span className="text-sm text-muted-foreground tracking-widest uppercase">Pixelpur</span>
+              </div>
             </div>
+            
             {/* Decorative elements */}
             <div className="absolute -bottom-6 -left-6 w-32 h-32 border-2 border-primary rounded-2xl -z-10" />
             <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-primary rounded-full opacity-60 blur-sm" />
