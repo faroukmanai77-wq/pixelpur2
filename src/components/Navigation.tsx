@@ -21,11 +21,11 @@ const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-background/90 backdrop-blur-md py-4" : "py-6"
+        scrolled ? "bg-background/90 backdrop-blur-md py-3 md:py-4" : "py-4 md:py-6"
       }`}
     >
-      <div className="container flex items-center justify-between">
-        <a href="#" className="font-display text-2xl font-bold text-foreground">
+      <div className="container flex items-center justify-between px-4 md:px-6">
+        <a href="#" className="font-display text-xl md:text-2xl font-bold text-foreground">
           Pixelpur<span className="text-primary">.</span>
         </a>
         
@@ -43,7 +43,7 @@ const Navigation = () => {
 
         <a
           href="#contact"
-          className="bg-gradient-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
+          className="bg-gradient-primary text-primary-foreground px-4 md:px-6 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-semibold hover:opacity-90 transition-opacity"
         >
           Discutons
         </a>

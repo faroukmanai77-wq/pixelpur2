@@ -2,18 +2,18 @@ import { ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-20">
+    <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-24 md:pt-20 px-4 md:px-0">
       {/* Background gradient orbs */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-[128px]" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-primary/10 rounded-full blur-[128px]" />
+      <div className="absolute top-1/4 -left-32 w-64 md:w-96 h-64 md:h-96 bg-primary/20 rounded-full blur-[128px]" />
+      <div className="absolute bottom-1/4 -right-32 w-64 md:w-96 h-64 md:h-96 bg-primary/10 rounded-full blur-[128px]" />
       
       <div className="container relative z-10">
         <div className="max-w-5xl">
-          <p className="animate-fade-up text-primary font-medium mb-6 tracking-wider uppercase text-sm">
+          <p className="animate-fade-up text-primary font-medium mb-4 md:mb-6 tracking-wider uppercase text-xs md:text-sm">
             Designer Web & UI/UX
           </p>
           
-          <h1 className="animate-fade-up delay-100 font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] mb-8">
+          <h1 className="animate-fade-up delay-100 font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[1] md:leading-[0.95] mb-6 md:mb-8">
             Je crée des
             <br />
             <span className="text-gradient">expériences</span>
@@ -21,21 +21,21 @@ const HeroSection = () => {
             digitales uniques
           </h1>
           
-          <p className="animate-fade-up delay-200 text-lg md:text-xl text-muted-foreground max-w-xl mb-12">
+          <p className="animate-fade-up delay-200 text-base md:text-xl text-muted-foreground max-w-xl mb-8 md:mb-12">
             Transformer vos idées en interfaces élégantes et intuitives qui captivent 
             vos utilisateurs et propulsent votre marque.
           </p>
           
-          <div className="animate-fade-up delay-300 flex flex-wrap gap-4">
+          <div className="animate-fade-up delay-300 flex flex-col sm:flex-row gap-3 md:gap-4">
             <a
               href="#projets"
-              className="bg-gradient-primary text-primary-foreground px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all hover:shadow-glow"
+              className="bg-gradient-primary text-primary-foreground px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold hover:opacity-90 transition-all hover:shadow-glow text-center"
             >
               Voir mes projets
             </a>
             <a
               href="#contact"
-              className="border border-border text-foreground px-8 py-4 rounded-full font-semibold hover:bg-secondary transition-colors"
+              className="border border-border text-foreground px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold hover:bg-secondary transition-colors text-center"
             >
               Me contacter
             </a>

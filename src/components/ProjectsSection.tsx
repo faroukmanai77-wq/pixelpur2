@@ -14,27 +14,27 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projets" className="py-32">
+    <section id="projets" className="py-16 md:py-32 px-4 md:px-0">
       <div className="container">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-16 gap-4 md:gap-6">
           <div>
-            <p className="text-primary font-medium mb-4 tracking-wider uppercase text-sm">
+            <p className="text-primary font-medium mb-2 md:mb-4 tracking-wider uppercase text-xs md:text-sm">
               Portfolio
             </p>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
               Projets sélectionnés
             </h2>
           </div>
-          <p className="text-muted-foreground max-w-md">
+          <p className="text-muted-foreground max-w-md text-sm md:text-base">
             Une sélection de mes travaux récents en design d'interface et expérience utilisateur.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           {projects.map((project, index) => (
             <article
               key={project.id}
-              className="group relative rounded-2xl overflow-hidden bg-card hover-lift cursor-pointer"
+              className="group relative rounded-xl md:rounded-2xl overflow-hidden bg-card hover-lift cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
@@ -49,16 +49,16 @@ const ProjectsSection = () => {
 
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
 
-              <div className="absolute bottom-0 left-0 right-0 p-8">
-                <div className="flex items-start justify-between gap-4">
+              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8">
+                <div className="flex items-start justify-between gap-3 md:gap-4">
                   <div>
-                    <span className="text-primary text-sm font-medium mb-2 block">
+                    <span className="text-primary text-xs md:text-sm font-medium mb-1 md:mb-2 block">
                       {project.category}
                     </span>
-                    <h3 className="font-display text-2xl md:text-3xl font-bold mb-2">
+                    <h3 className="font-display text-xl md:text-2xl lg:text-3xl font-bold mb-1 md:mb-2">
                       {project.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-muted-foreground text-xs md:text-sm">
                       {project.description}
                     </p>
                   </div>
@@ -66,10 +66,10 @@ const ProjectsSection = () => {
                     href={project.url} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full bg-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 hover:scale-110"
+                    className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0 opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-0 md:translate-y-4 group-hover:translate-y-0 hover:scale-110"
                     onClick={(e) => e.stopPropagation()}
                   >
-                    <ArrowUpRight className="w-5 h-5 text-primary-foreground" />
+                    <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 text-primary-foreground" />
                   </a>
                 </div>
               </div>
