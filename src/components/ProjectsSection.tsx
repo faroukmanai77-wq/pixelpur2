@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import qualcoImage from "@/assets/qualco-management.webp";
 import bapImage from "@/assets/bap.png";
 import quosmosImage from "@/assets/quosmos.webp";
