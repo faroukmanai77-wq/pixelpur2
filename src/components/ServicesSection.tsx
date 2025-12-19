@@ -25,34 +25,34 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-32 bg-card/50">
+    <section id="services" className="py-16 md:py-32 bg-card/50 px-4 md:px-0">
       <div className="container">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-primary font-medium mb-4 tracking-wider uppercase text-sm">
+        <div className="text-center max-w-2xl mx-auto mb-8 md:mb-16">
+          <p className="text-primary font-medium mb-2 md:mb-4 tracking-wider uppercase text-xs md:text-sm">
             Services
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
             Ce que je peux faire pour vous
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground text-sm md:text-base">
             Des solutions complètes de design pour donner vie à vos projets digitaux.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="group p-8 rounded-2xl bg-background border border-border hover:border-primary/50 transition-all duration-300 hover-lift"
+              className="group p-5 md:p-8 rounded-xl md:rounded-2xl bg-background border border-border hover:border-primary/50 transition-all duration-300 hover-lift"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-6 group-hover:shadow-glow transition-shadow">
-                <service.icon className="w-6 h-6 text-primary-foreground" />
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg md:rounded-xl bg-gradient-primary flex items-center justify-center mb-4 md:mb-6 group-hover:shadow-glow transition-shadow">
+                <service.icon className="w-5 h-5 md:w-6 md:h-6 text-primary-foreground" />
               </div>
-              <h3 className="font-display text-xl font-bold mb-3">
+              <h3 className="font-display text-lg md:text-xl font-bold mb-2 md:mb-3">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
                 {service.description}
               </p>
             </div>
