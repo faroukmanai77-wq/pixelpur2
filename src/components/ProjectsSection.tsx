@@ -5,7 +5,12 @@ import quosmosImage from "@/assets/quosmos.webp";
 import comptableImage from "@/assets/comptable.jpg";
 
 
-const projects = [ { id: 1, title: "La Bande à Paul", category: "Site Vitrine", description: "Refonte complète du site d'une agence de scénographie", image: bapImage, color: "from-orange-500/20 to-amber-500/20", }, { id: 2, title: "Qualco Management", category: "Site Vitrine", description: "Création du site d'une entreprise de gestion immobilière", image: qualcoImage, color: "from-emerald-500/20 to-teal-500/20", }, { id: 3, title: "Solutions Quosmos", category: "Site Vitrine", description: "Création du site d'une entreprise de distribution alimentaire", image: quosmosImage, color: "from-purple-500/20 to-pink-500/20", }, { id: 4, title: "Fiscpro Conseils", category: "Site Vitrine", description: "Création du site d'un comptable", image: comptableImage, color: "from-green-500/20 to-emerald-500/20", }, ];
+const projects = [
+  { id: 1, title: "La Bande à Paul", category: "Site Vitrine", description: "Refonte complète du site d'une agence de scénographie", image: bapImage, color: "from-orange-500/20 to-amber-500/20", url: "https://labandeapaul.ca" },
+  { id: 2, title: "Qualco Management", category: "Site Vitrine", description: "Création du site d'une entreprise de gestion immobilière", image: qualcoImage, color: "from-emerald-500/20 to-teal-500/20", url: "https://qualco.ca" },
+  { id: 3, title: "Solutions Quosmos", category: "Site Vitrine", description: "Création du site d'une entreprise de distribution alimentaire", image: quosmosImage, color: "from-purple-500/20 to-pink-500/20", url: "https://quosmos.ca" },
+  { id: 4, title: "Fiscpro Conseils", category: "Site Vitrine", description: "Création du site d'un comptable", image: comptableImage, color: "from-green-500/20 to-emerald-500/20", url: "https://fiscpro.ca" },
+];
 
 const ProjectsSection = () => {
   return (
@@ -57,9 +62,15 @@ const ProjectsSection = () => {
                       {project.description}
                     </p>
                   </div>
-                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                  <a 
+                    href={project.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 rounded-full bg-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 hover:scale-110"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     <ArrowUpRight className="w-5 h-5 text-primary-foreground" />
-                  </div>
+                  </a>
                 </div>
               </div>
             </article>
