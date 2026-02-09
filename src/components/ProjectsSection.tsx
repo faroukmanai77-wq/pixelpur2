@@ -3,6 +3,8 @@ import qualcoImage from "@/assets/qualco-management.webp";
 import bapImage from "@/assets/bap.png";
 import quosmosImage from "@/assets/quosmos.webp";
 import comptableImage from "@/assets/comptable.jpg";
+import finivoImage from "@/assets/Savings.png";
+
 
 
 const projects = [
@@ -10,7 +12,7 @@ const projects = [
   { id: 2, title: "Qualco Management", category: "Site Vitrine", description: "Création du site d'une entreprise de gestion immobilière", image: qualcoImage, color: "from-emerald-500/20 to-teal-500/20", url: "https://qualco.ca" },
   { id: 3, title: "Solutions Quosmos", category: "Site Vitrine", description: "Création du site d'une entreprise de distribution alimentaire", image: quosmosImage, color: "from-purple-500/20 to-pink-500/20", url: "https://quosmos.ca" },
   { id: 4, title: "Fiscpro Conseils", category: "Site Vitrine", description: "Création du site d'un comptable", image: comptableImage, color: "from-green-500/20 to-emerald-500/20", url: "https://fiscpro.ca" },
-  { id: 5, title: "Finivo", category: "Site Vitrine", description: "La plateforme complète pour les Canadiens : comparez les cartes de crédit et plateformes de courtage, planifiez avec nos calculateurs", image: qualcoImage, color: "from-blue-500/20 to-cyan-500/20", url: "https://finivo.ca" },
+  { id: 5, title: "Finivo", category: "Site Vitrine", description: "La plateforme complète pour les Canadiens : comparez les cartes de crédit et plateformes de courtage, planifiez avec nos calculateurs", image: finivoImage, color: "from-blue-500/20 to-cyan-500/20", url: "https://finivo.ca" },
   { id: 6, title: "AAOsteo", category: "Site Vitrine", description: "Création du site d'une clinique de soins de santé à Brossard", image: bapImage, color: "from-rose-500/20 to-red-500/20", url: "https://aaosteo.ca" },
 ];
 
