@@ -46,8 +46,8 @@ const ServicesSection = () => {
               className="group p-5 md:p-8 rounded-xl md:rounded-2xl bg-background border border-border hover:border-primary/50 transition-all duration-300 hover-lift"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg md:rounded-xl bg-gradient-primary flex items-center justify-center mb-4 md:mb-6 group-hover:shadow-glow transition-shadow">
-                <service.icon className="w-5 h-5 md:w-6 md:h-6 text-primary-foreground" />
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-none bg-foreground flex items-center justify-center mb-4 md:mb-6 group-hover:shadow-glow transition-shadow">
+                <service.icon className="w-5 h-5 md:w-6 md:h-6 text-background" />
               </div>
               <h3 className="font-display text-lg md:text-xl font-bold mb-2 md:mb-3">
                 {service.title}

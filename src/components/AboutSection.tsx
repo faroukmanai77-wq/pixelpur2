@@ -48,8 +48,8 @@ const AboutSection = () => {
               <img alt="Portrait" className="w-full h-full object-cover" src="/lovable-uploads/126f1e0e-4be1-4f42-8c43-108340a8e813.png" />
             </div>
             {/* Decorative elements */}
-            <div className="absolute -bottom-3 md:-bottom-6 -left-3 md:-left-6 w-20 md:w-32 h-20 md:h-32 border-2 border-primary rounded-xl md:rounded-2xl -z-10" />
-            <div className="absolute -top-3 md:-top-6 -right-3 md:-right-6 w-16 md:w-24 h-16 md:h-24 bg-gradient-primary rounded-full opacity-60 blur-sm" />
+            <div className="absolute -bottom-3 md:-bottom-6 -left-3 md:-left-6 w-20 md:w-32 h-20 md:h-32 border-2 border-foreground/30 rounded-none -z-10" />
+            <div className="absolute -top-3 md:-top-6 -right-3 md:-right-6 w-16 md:w-24 h-16 md:h-24 bg-foreground/10 rounded-none" />
           </div>
         </div>
       </div>
