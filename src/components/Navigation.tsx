@@ -43,7 +43,7 @@ const Navigation = () => {
 
         <a
           href="#contact"
-          className="bg-gradient-primary text-primary-foreground px-4 md:px-6 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-semibold hover:opacity-90 transition-opacity"
+          className="bg-foreground text-background px-4 md:px-6 py-2 md:py-2.5 rounded-none text-xs md:text-sm font-mono font-bold uppercase tracking-wider hover:bg-foreground/90 transition-colors"
         >
           Discutons
         </a>
