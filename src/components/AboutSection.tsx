@@ -45,7 +45,7 @@ const AboutSection = () => {
           
           <div className="relative order-1 lg:order-2">
             <div className="aspect-[4/5] rounded-xl md:rounded-2xl overflow-hidden bg-card max-w-sm mx-auto lg:max-w-none">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=750&fit=crop&crop=face" alt="Portrait" className="w-full h-full object-cover" />
+              <img alt="Portrait" className="w-full h-full object-cover" src="/lovable-uploads/126f1e0e-4be1-4f42-8c43-108340a8e813.png" />
             </div>
             {/* Decorative elements */}
             <div className="absolute -bottom-3 md:-bottom-6 -left-3 md:-left-6 w-20 md:w-32 h-20 md:h-32 border-2 border-primary rounded-xl md:rounded-2xl -z-10" />
