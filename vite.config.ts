@@ -3,9 +3,9 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/pixelpur2/",  // ← AJOUTE ÇA ICI ! (avec le slash final)
+  // base: "/pixelpur2/",  ← COMmente ou SUPPRIME cette ligne pour Vercel
+  // Ou mets explicitement : base: '/',  (mais vide est mieux)
 
   server: {
     host: "::",
