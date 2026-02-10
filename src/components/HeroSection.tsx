@@ -2,21 +2,21 @@ import { ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-24 md:pt-20 px-4 md:px-0">
+    <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-24 md:pt-20 px-4 md:px-0 scanlines">
       {/* Background gradient orbs */}
       <div className="absolute top-1/4 -left-32 w-64 md:w-96 h-64 md:h-96 bg-foreground/5 rounded-full blur-[128px]" />
       <div className="absolute bottom-1/4 -right-32 w-64 md:w-96 h-64 md:h-96 bg-foreground/3 rounded-full blur-[128px]" />
       
       <div className="container relative z-10">
         <div className="max-w-5xl">
-          <p className="animate-fade-up text-primary font-medium mb-4 md:mb-6 tracking-wider uppercase text-xs md:text-sm">
+          <p className="animate-fade-up text-primary font-medium mb-4 md:mb-6 tracking-wider uppercase text-xs md:text-sm font-mono cursor-blink">
             Designer Web & UI/UX
           </p>
           
           <h1 className="animate-fade-up delay-100 font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold uppercase leading-[1] md:leading-[0.95] mb-6 md:mb-8 tracking-tight">
             Je crée des
             <br />
-            <span className="text-gradient">expériences</span>
+            <span className="text-gradient glitch" data-text="expériences">expériences</span>
             <br />
             digitales uniques
           </h1>
