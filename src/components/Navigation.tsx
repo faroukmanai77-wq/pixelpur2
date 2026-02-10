@@ -26,7 +26,7 @@ const Navigation = () => {
     >
       <div className="container flex items-center justify-between px-4 md:px-6">
         <a href="#" className="font-display text-xl md:text-2xl font-bold text-foreground">
-          <span className="glitch" data-text="Pixelpur.">Pixelpur<span className="text-primary">.</span></span>
+          Pixelpur<span className="text-primary">.</span>
         </a>
         
         <div className="hidden md:flex items-center gap-8">
