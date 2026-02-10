@@ -12,7 +12,7 @@ const ContactSection = () => {
           <h2 className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-8">
             Créons quelque chose
             <br />
-            <span className="text-gradient glitch" data-text="d'extraordinaire">d'extraordinaire</span>
+            <span className="text-primary">d'extraordinaire</span>
           </h2>
           <p className="text-muted-foreground text-sm md:text-lg max-w-xl mx-auto mb-8 md:mb-12">
             Vous avez un projet en tête? Discutons-en et transformons votre vision en réalité.
