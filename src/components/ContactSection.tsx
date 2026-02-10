@@ -19,7 +19,7 @@ const ContactSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 mb-8 md:mb-16">
-            <a href="mailto:faroukmanai@hotmail.fr" className="group flex items-center gap-2 md:gap-3 bg-foreground text-background px-5 md:px-8 py-3 md:py-4 rounded-none font-mono font-bold uppercase tracking-wider hover:bg-foreground/90 transition-all text-sm md:text-base">
+            <a href="mailto:faroukmanai@hotmail.fr" className="group flex items-center gap-2 md:gap-3 bg-primary text-primary-foreground px-5 md:px-8 py-3 md:py-4 rounded-none font-mono font-bold uppercase tracking-wider hover:bg-primary/90 transition-all text-sm md:text-base">
               <Mail className="w-4 h-4 md:w-5 md:h-5" />
               <span className="truncate">faroukmanai@hotmail.fr</span>
               <ArrowUpRight className="w-3.5 h-3.5 md:w-4 md:h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

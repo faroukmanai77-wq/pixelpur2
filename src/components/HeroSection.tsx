@@ -29,7 +29,7 @@ const HeroSection = () => {
           <div className="animate-fade-up delay-300 flex flex-col sm:flex-row gap-3 md:gap-4">
             <a
               href="#projets"
-              className="bg-foreground text-background px-6 md:px-8 py-3 md:py-4 rounded-none font-mono font-bold uppercase tracking-wider hover:bg-foreground/90 transition-all text-center text-sm"
+              className="bg-primary text-primary-foreground px-6 md:px-8 py-3 md:py-4 rounded-none font-mono font-bold uppercase tracking-wider hover:bg-primary/90 transition-all text-center text-sm"
             >
               Voir mes projets
             </a>
