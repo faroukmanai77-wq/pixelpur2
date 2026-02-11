@@ -39,17 +39,20 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="group p-5 md:p-8 rounded-xl md:rounded-2xl bg-background border border-border hover:border-primary/50 transition-all duration-300 hover-lift"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group relative p-6 md:p-8 bg-card border border-border/50 hover:border-primary/40 transition-all duration-500 hover-lift overflow-hidden"
             >
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-none bg-foreground flex items-center justify-center mb-4 md:mb-6 group-hover:shadow-glow transition-shadow">
-                <service.icon className="w-5 h-5 md:w-6 md:h-6 text-background" />
+              {/* Subtle corner accent */}
+              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary/0 group-hover:border-primary/60 transition-all duration-500" />
+              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary/0 group-hover:border-primary/60 transition-all duration-500" />
+
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-secondary flex items-center justify-center mb-6 md:mb-8 group-hover:bg-primary/10 transition-colors duration-500">
+                <service.icon className="w-5 h-5 md:w-6 md:h-6 text-muted-foreground group-hover:text-primary transition-colors duration-500" />
               </div>
-              <h3 className="font-display text-lg md:text-xl font-bold mb-2 md:mb-3">
+              <h3 className="font-display text-lg md:text-xl font-bold mb-3">
                 {service.title}
               </h3>
               <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
