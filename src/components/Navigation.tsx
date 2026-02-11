@@ -25,6 +25,17 @@ const Navigation = () => {
     { href: "#contact", label: "Contact" },
   ];
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    setMenuOpen(false);
+    const href = e.currentTarget.getAttribute("href");
+    if (href?.startsWith("#")) {
+      e.preventDefault();
+      setTimeout(() => {
+        document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+      }, 400);
+    }
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -32,7 +43,7 @@ const Navigation = () => {
       }`}
     >
       <div className="container flex items-center justify-between px-4 md:px-6">
-        <a href="#" className="font-display text-xl md:text-2xl font-bold text-foreground">
+        <a href="#" className="font-display text-xl md:text-2xl font-bold text-foreground z-50 relative">
           Pixelpur<span className="text-primary">.</span>
         </a>
 
@@ -83,33 +94,44 @@ const Navigation = () => {
 
       {/* Mobile menu overlay */}
       <div
-        className={`fixed inset-0 bg-background/98 backdrop-blur-lg flex flex-col items-center justify-center gap-8 transition-all duration-500 md:hidden ${
+        className={`fixed inset-0 bg-background flex flex-col transition-all duration-500 md:hidden ${
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        {navLinks.map((link, i) => (
-          <a
-            key={link.href}
-            href={link.href}
-            onClick={() => setMenuOpen(false)}
-            className={`font-display text-3xl font-bold text-foreground hover:text-primary transition-all duration-300 ${
-              menuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-            }`}
-            style={{ transitionDelay: menuOpen ? `${i * 80 + 100}ms` : "0ms" }}
-          >
-            {link.label}
-          </a>
-        ))}
-        <a
-          href="#contact"
-          onClick={() => setMenuOpen(false)}
-          className={`mt-4 bg-primary text-primary-foreground px-8 py-3 rounded-none text-sm font-mono font-bold uppercase tracking-wider hover:bg-primary/90 transition-all duration-300 ${
-            menuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+        <div className="flex-1 flex flex-col justify-center px-8 gap-2">
+          {navLinks.map((link, i) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={handleLinkClick}
+              className={`font-display text-4xl font-bold text-foreground hover:text-primary transition-all duration-500 py-3 border-b border-border/30 ${
+                menuOpen ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
+              }`}
+              style={{ transitionDelay: menuOpen ? `${i * 100 + 150}ms` : "0ms" }}
+            >
+              <span className="text-primary/40 font-mono text-sm mr-3">0{i + 1}</span>
+              {link.label}
+            </a>
+          ))}
+        </div>
+
+        <div
+          className={`px-8 pb-12 transition-all duration-500 ${
+            menuOpen ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
-          style={{ transitionDelay: menuOpen ? `${navLinks.length * 80 + 100}ms` : "0ms" }}
+          style={{ transitionDelay: menuOpen ? `${navLinks.length * 100 + 200}ms` : "0ms" }}
         >
-          Discutons
-        </a>
+          <a
+            href="#contact"
+            onClick={handleLinkClick}
+            className="block w-full text-center bg-primary text-primary-foreground px-8 py-4 rounded-none text-sm font-mono font-bold uppercase tracking-wider hover:bg-primary/90 transition-colors"
+          >
+            Discutons
+          </a>
+          <p className="text-muted-foreground text-xs font-mono text-center mt-6 tracking-wider">
+            CRÉATION DIGITALE & DESIGN
+          </p>
+        </div>
       </div>
     </nav>
   );
