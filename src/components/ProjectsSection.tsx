@@ -35,51 +35,62 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-          {projects.map((project, index) => (
-            <article
-              key={project.id}
-              className="group relative rounded-xl md:rounded-2xl overflow-hidden bg-card hover-lift cursor-pointer"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0"
-                />
-              </div>
-
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-
-              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8">
-                <div className="flex items-start justify-between gap-3 md:gap-4">
-                  <div>
-                    <span className="text-primary text-xs md:text-sm font-medium mb-1 md:mb-2 block">
-                      {project.category}
-                    </span>
-                    <h3 className="font-display text-xl md:text-2xl lg:text-3xl font-bold mb-1 md:mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-muted-foreground text-xs md:text-sm">
-                      {project.description}
-                    </p>
-                  </div>
-                  <a 
-                    href={project.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0 opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-0 md:translate-y-4 group-hover:translate-y-0 hover:scale-110"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 text-primary-foreground" />
-                  </a>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 auto-rows-[280px] md:auto-rows-[320px]">
+          {projects.map((project, index) => {
+            const isLarge = index === 0 || index === 3;
+            return (
+              <article
+                key={project.id}
+                className={`group relative overflow-hidden bg-card cursor-pointer border border-border/30 hover:border-primary/40 transition-all duration-500 ${
+                  isLarge ? "md:col-span-2 md:row-span-1" : "md:col-span-1 md:row-span-1"
+                }`}
+              >
+                <div className="absolute inset-0 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                  />
                 </div>
-              </div>
-            </article>
-          ))}
+
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/10 group-hover:via-background/40 transition-all duration-500" />
+
+                {/* Corner accents */}
+                <div className="absolute top-0 left-0 w-10 h-10 border-t-2 border-l-2 border-primary/0 group-hover:border-primary/60 transition-all duration-500" />
+                <div className="absolute bottom-0 right-0 w-10 h-10 border-b-2 border-r-2 border-primary/0 group-hover:border-primary/60 transition-all duration-500" />
+
+                {/* Number tag */}
+                <div className="absolute top-4 left-4 font-mono text-xs text-muted-foreground/50 group-hover:text-primary/70 transition-colors duration-500">
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+
+                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                  <div className="flex items-end justify-between gap-3">
+                    <div>
+                      <span className="text-primary text-[10px] md:text-xs font-medium tracking-widest uppercase mb-1 block">
+                        {project.category}
+                      </span>
+                      <h3 className={`font-display font-bold mb-1 ${isLarge ? "text-xl md:text-3xl" : "text-lg md:text-xl"}`}>
+                        {project.title}
+                      </h3>
+                      <p className={`text-muted-foreground text-xs leading-relaxed ${isLarge ? "md:max-w-md" : "line-clamp-2"}`}>
+                        {project.description}
+                      </p>
+                    </div>
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-9 h-9 md:w-10 md:h-10 bg-primary flex items-center justify-center flex-shrink-0 opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-0 md:translate-y-3 group-hover:translate-y-0"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <ArrowUpRight className="w-4 h-4 text-primary-foreground" />
+                    </a>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
