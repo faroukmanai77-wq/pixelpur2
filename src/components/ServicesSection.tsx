@@ -1,4 +1,5 @@
 import { Palette, Layout, Smartphone, Sparkles } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const services = [
   {
@@ -24,8 +25,9 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const sectionRef = useScrollReveal<HTMLElement>();
   return (
-    <section id="services" className="py-16 md:py-32 bg-card/50 px-4 md:px-0">
+    <section id="services" ref={sectionRef} className="py-16 md:py-32 bg-card/50 px-4 md:px-0">
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-8 md:mb-16">
           <p className="text-primary font-medium mb-2 md:mb-4 tracking-wider uppercase text-xs md:text-sm">

@@ -1,4 +1,7 @@
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+
 const AboutSection = () => {
+  const sectionRef = useScrollReveal<HTMLElement>();
   const stats = [{
     value: "2+",
     label: "Années d'expérience"
@@ -9,7 +12,7 @@ const AboutSection = () => {
     value: "10+",
     label: "Clients satisfaits"
   }];
-  return <section id="apropos" className="py-16 md:py-32 relative overflow-hidden px-4 md:px-0">
+  return <section id="apropos" ref={sectionRef} className="py-16 md:py-32 relative overflow-hidden px-4 md:px-0">
       {/* Background element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-primary/5 rounded-full blur-[100px]" />
       

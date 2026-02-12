@@ -1,4 +1,5 @@
 import { useRef, useEffect, useCallback } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { ArrowUpRight } from "lucide-react";
 import qualcoImage from "@/assets/qualco-management.webp";
 import bapImage from "@/assets/bap.png";
@@ -19,7 +20,7 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useScrollReveal<HTMLElement>();
   const imagesRef = useRef<HTMLImageElement[]>([]);
 
   const handleScroll = useCallback(() => {
@@ -38,6 +39,11 @@ const ProjectsSection = () => {
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
+
+  // Merge refs
+  const mergedRef = (el: HTMLElement | null) => {
+    (sectionRef as React.MutableRefObject<HTMLElement | null>).current = el;
+  };
 
   return (
     <section id="projets" ref={sectionRef} className="py-16 md:py-32 px-4 md:px-0">
