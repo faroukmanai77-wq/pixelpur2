@@ -1,3 +1,4 @@
+import { useRef, useEffect, useCallback } from "react";
 import { ArrowUpRight } from "lucide-react";
 import qualcoImage from "@/assets/qualco-management.webp";
 import bapImage from "@/assets/bap.png";
@@ -18,8 +19,28 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const imagesRef = useRef<HTMLImageElement[]>([]);
+
+  const handleScroll = useCallback(() => {
+    imagesRef.current.forEach((img) => {
+      if (!img) return;
+      const rect = img.getBoundingClientRect();
+      const viewH = window.innerHeight;
+      const progress = (viewH - rect.top) / (viewH + rect.height);
+      const offset = (progress - 0.5) * 40;
+      img.style.transform = `translateY(${offset}px) scale(1.15)`;
+    });
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
   return (
-    <section id="projets" className="py-16 md:py-32 px-4 md:px-0">
+    <section id="projets" ref={sectionRef} className="py-16 md:py-32 px-4 md:px-0">
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-16 gap-4 md:gap-6">
           <div>
@@ -47,9 +68,11 @@ const ProjectsSection = () => {
               >
                 <div className="absolute inset-0 overflow-hidden">
                   <img
+                    ref={(el) => { if (el) imagesRef.current[index] = el; }}
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                    className="w-full h-full object-cover grayscale transition-[filter] duration-700 group-hover:grayscale-0"
+                    style={{ transform: "translateY(0) scale(1.15)", willChange: "transform" }}
                   />
                 </div>
 
