@@ -1,6 +1,9 @@
 import { Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+
 const ContactSection = () => {
-  return <section id="contact" className="py-16 md:py-32 relative overflow-hidden px-4 md:px-0">
+  const sectionRef = useScrollReveal<HTMLElement>();
+  return <section id="contact" ref={sectionRef} className="py-16 md:py-32 relative overflow-hidden px-4 md:px-0">
       {/* Background gradient */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] md:w-[800px] h-[300px] md:h-[400px] bg-primary/10 rounded-full blur-[120px]" />
       
