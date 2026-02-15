@@ -23,14 +23,14 @@ const AboutSection = () => {
               À propos
             </p>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-8">
-              Designer passionné par l'innovation
+              Votre créateur de sites vitrines à Montréal
             </h2>
             <div className="space-y-4 md:space-y-6 text-muted-foreground text-sm md:text-base">
-              <p>Depuis 2023, je conçois des expériences digitales qui allient esthétique et fonctionnalité. Mon approche combine une compréhension profonde des besoins utilisateurs avec une sensibilité artistique unique.</p>
+              <p>Depuis 2023, je conçois des sites vitrines professionnels qui allient esthétique et fonctionnalité. Chaque site est pensé pour mettre en valeur votre entreprise et attirer de nouveaux clients grâce à un design moderne et un référencement optimisé.</p>
               <p>
-                Chaque projet est une opportunité de créer quelque chose 
-                d'exceptionnel. Je travaille en étroite collaboration avec mes 
-                clients pour transformer leur vision en réalité digitale.
+                Que vous soyez une PME, un indépendant ou une entreprise établie à Montréal, 
+                je travaille en étroite collaboration avec vous pour créer un site vitrine 
+                qui reflète votre identité et convertit vos visiteurs en clients.
               </p>
             </div>
             

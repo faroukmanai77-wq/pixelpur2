@@ -5,8 +5,8 @@ const Footer = () => {
         <a href="#" className="font-display text-lg md:text-xl font-bold">
           Pixelpur<span className="text-primary">.</span>
         </a>
-        <p className="text-xs md:text-sm text-muted-foreground">
-          © 2025 Tous droits réservés
+        <p className="text-xs md:text-sm text-muted-foreground text-center">
+          © 2025 Pixelpur — Création de sites vitrines à Montréal. Tous droits réservés.
         </p>
       </div>
     </footer>

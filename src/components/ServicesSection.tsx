@@ -3,24 +3,24 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const services = [
   {
-    icon: Palette,
-    title: "Design UI/UX",
-    description: "Création d'interfaces utilisateur intuitives et esthétiques qui maximisent l'engagement.",
+    icon: Layout,
+    title: "Création de site vitrine",
+    description: "Sites vitrines professionnels, modernes et optimisés pour le référencement. La solution idéale pour présenter votre entreprise en ligne.",
   },
   {
-    icon: Layout,
-    title: "Design Web",
-    description: "Sites web modernes et responsifs qui reflètent l'identité unique de votre marque.",
+    icon: Palette,
+    title: "Design UI/UX",
+    description: "Interfaces utilisateur intuitives et esthétiques qui maximisent l'engagement et les conversions de vos visiteurs.",
   },
   {
     icon: Smartphone,
-    title: "Design Mobile",
-    description: "Applications mobiles fluides avec une expérience utilisateur optimale sur tous les appareils.",
+    title: "Design responsive",
+    description: "Sites web parfaitement adaptés à tous les écrans : mobile, tablette et desktop pour une expérience optimale.",
   },
   {
     icon: Sparkles,
-    title: "Branding",
-    description: "Identité visuelle cohérente et mémorable qui distingue votre marque de la concurrence.",
+    title: "Refonte de site web",
+    description: "Modernisation de votre site existant avec un design actuel, de meilleures performances et un SEO optimisé.",
   },
 ];
 
@@ -34,10 +34,10 @@ const ServicesSection = () => {
             Services
           </p>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
-            Ce que je peux faire pour vous
+            Création de sites vitrines sur mesure
           </h2>
           <p className="text-muted-foreground text-sm md:text-base">
-            Des solutions complètes de design pour donner vie à vos projets digitaux.
+            Des sites vitrines professionnels et performants pour PME, indépendants et entreprises à Montréal.
           </p>
         </div>
 
