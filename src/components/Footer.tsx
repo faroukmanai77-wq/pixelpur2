@@ -6,11 +6,11 @@ const Footer = () => {
           Pixelpur<span className="text-primary">.</span>
         </a>
         <p className="text-xs md:text-sm text-muted-foreground text-center">
-          © 2025 Pixelpur — Création de sites vitrines à Montréal. Tous droits réservés.
+          © 2023 Pixelpur — Création de sites vitrines à Montréal. Tous droits réservés.
         </p>
       </div>
-    </footer>
-  );
+    </footer>);
+
 };
 
 export default Footer;
