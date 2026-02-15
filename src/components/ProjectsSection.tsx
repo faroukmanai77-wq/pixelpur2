@@ -54,11 +54,11 @@ const ProjectsSection = () => {
               Portfolio
             </p>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
-              Projets sélectionnés
+              Sites vitrines réalisés
             </h2>
           </div>
           <p className="text-muted-foreground max-w-md text-sm md:text-base">
-            Une sélection de mes travaux récents en design d'interface et expérience utilisateur.
+            Découvrez nos réalisations récentes en création de sites vitrines pour des entreprises à Montréal et au Québec.
           </p>
         </div>
 

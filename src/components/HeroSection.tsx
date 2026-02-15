@@ -10,20 +10,20 @@ const HeroSection = () => {
       <div className="container relative z-10">
         <div className="max-w-5xl">
           <p className="animate-fade-up text-primary font-medium mb-4 md:mb-6 tracking-wider uppercase text-xs md:text-sm font-mono">
-            Designer Web & UI/UX
+            Création de sites vitrines à Montréal
           </p>
           
           <h1 className="animate-fade-up delay-100 font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold uppercase leading-[1] md:leading-[0.95] mb-6 md:mb-8 tracking-tight">
             Je crée des
             <br />
-            <span className="typewriter text-primary">expériences</span>
+            <span className="typewriter text-primary">sites vitrines</span>
             <br />
-            digitales uniques
+            qui convertissent
           </h1>
           
           <p className="animate-fade-up delay-200 text-base md:text-xl text-muted-foreground max-w-xl mb-8 md:mb-12">
-            Transformer vos idées en interfaces élégantes et intuitives qui captivent 
-            vos utilisateurs et propulsent votre marque.
+            Designer web à Montréal, je conçois des sites vitrines professionnels, 
+            modernes et optimisés SEO qui captivent vos visiteurs et propulsent votre entreprise.
           </p>
           
           <div className="animate-fade-up delay-300 flex flex-col sm:flex-row gap-3 md:gap-4">
