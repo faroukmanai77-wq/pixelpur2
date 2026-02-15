@@ -3,7 +3,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const AboutSection = () => {
   const sectionRef = useScrollReveal<HTMLElement>();
   const stats = [{
-    value: "2+",
+    value: "3+",
     label: "Années d'expérience"
   }, {
     value: "10+",
