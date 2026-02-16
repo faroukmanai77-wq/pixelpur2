@@ -62,15 +62,12 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 auto-rows-[280px] md:auto-rows-[320px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 auto-rows-[280px] md:auto-rows-[350px]">
           {projects.map((project, index) => {
-            const isLarge = index === 0 || index === 3;
             return (
               <article
                 key={project.id}
-                className={`group relative overflow-hidden bg-card cursor-pointer border border-border/30 hover:border-primary/40 transition-all duration-500 ${
-                  isLarge ? "md:col-span-2 md:row-span-1" : "md:col-span-1 md:row-span-1"
-                }`}
+                className="group relative overflow-hidden bg-card cursor-pointer border border-border/30 hover:border-primary/40 transition-all duration-500"
               >
                 <div className="absolute inset-0 overflow-hidden">
                   <img
@@ -99,10 +96,10 @@ const ProjectsSection = () => {
                       <span className="text-primary text-[10px] md:text-xs font-medium tracking-widest uppercase mb-1 block">
                         {project.category}
                       </span>
-                      <h3 className={`font-display font-bold mb-1 ${isLarge ? "text-xl md:text-3xl" : "text-lg md:text-xl"}`}>
+                      <h3 className="font-display font-bold mb-1 text-lg md:text-2xl">
                         {project.title}
                       </h3>
-                      <p className={`text-muted-foreground text-xs leading-relaxed ${isLarge ? "md:max-w-md" : "line-clamp-2"}`}>
+                      <p className="text-muted-foreground text-xs leading-relaxed line-clamp-2 md:line-clamp-none md:max-w-md">
                         {project.description}
                       </p>
                     </div>
